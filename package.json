@@ -1,0 +1,11 @@
+{
+  "name": "my-exl-cloudapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "eca start"
+  },
+  "dependencies": {
+    "@exlibris/exl-cloudapp-base": "^0.1.20"
+  }
+}
