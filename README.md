@@ -29,6 +29,7 @@ With Print in LIBstick Alma app you can send your barcode/s and generate label/s
 # Daily use
 When entering relevant screens in Alma the Print in LIBstick button is enabled:
 ![Print in LIBstick button is enabled](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/Print_in_LIBstick_button_is_enabled.png)
+
 After clicking the button your LIBstick account will open in a new tab with the relevant label:
 
 ![Label in LIBstick](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/Label_in_LIBstick.png)
