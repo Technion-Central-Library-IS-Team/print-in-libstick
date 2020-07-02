@@ -4,7 +4,7 @@
 ### Print in one click directly from [Alma](https://www.exlibrisgroup.com/products/alma-library-services-platform/) screens to [LIBstick](https://libraries.technion.ac.il/libstick).
 
 With Print in LIBstick Alma app you can send your barcode/s and generate label/s directly from:
-* Single **ITEM** page - send each time one label from Alma to LIBstick (current release)
+* Single **ITEM** page - send each time one label from Alma to LIBstick (**current** release)
 * Single **SET** page - send set from Alma to LIBstick (**future** releases)
 * **ITEMS** search results page - send multiple labels from Alma to LIBstick (**future** releases)
 
