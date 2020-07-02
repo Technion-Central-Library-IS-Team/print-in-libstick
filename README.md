@@ -10,6 +10,13 @@ With Print in LIBstick Alma app you can send your barcode/s and generate label/s
 
 # First time configuration
 1. Click the following button:
+
+
+
+
+
+
+
 ![Config Button](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/config_btn.png)
 2. Enter your LIBstick **valid** account URL (e.g. https://libraries.technion.ac.il/technion-libstick/):
 ![Config Screen](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/config_screen.png)
