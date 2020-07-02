@@ -18,8 +18,12 @@ With Print in LIBstick Alma app you can send your barcode/s and generate label/s
 
 
 ![Config Button](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/config_btn.png)
+
+
 2. Enter your LIBstick **valid** account URL (e.g. https://libraries.technion.ac.il/technion-libstick/):
 ![Config Screen](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/config_screen.png)
+
+
 3. Click **SAVE** redirect automatically to the main screen of the app.
 
 **Note: The configuration will apply to the entire institute**
@@ -27,9 +31,14 @@ With Print in LIBstick Alma app you can send your barcode/s and generate label/s
 # Daily use
 When entering relevant screens in Alma the Print in LIBstick button is enabled:
 ![Print in LIBstick button is enabled](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/Print_in_LIBstick_button_is_enabled.png)
+
+
 After clicking the button your LIBstick account will open in a new tab with the relevant label:
+
 ![Label in LIBstick](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/Label_in_LIBstick.png)
 From now on, you can send more and more barcodes and generate labels in LIBstick
+
+
 ![Sent to LIBstick message](https://github.com/Technion-Central-Library-IS-Team/print-in-libstick/blob/master/cloudapp/src/assets/Barcode_sent_to_LIBstick_message.png)
 
 **Note: Inside NOT relevant screens in Alma the Print in LIBstick button is disabled.**
