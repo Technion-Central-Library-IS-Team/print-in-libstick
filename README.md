@@ -47,4 +47,4 @@ From now on, you can send more and more barcodes to LIBstick and generate labels
 See the full LIBstick documentation in the following **[link](https://libraries.technion.ac.il/technion-libstick/wp-content/themes/technionlibraryemptytheme/libsticktemplate/doc/LIBstick_documentation.pdf)**
 
 # License
-[BSD 3-Clause License](../blob/master/LICENSE)
+[BSD 3-Clause License](./LICENSE)
