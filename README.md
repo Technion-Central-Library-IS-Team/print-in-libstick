@@ -10,7 +10,7 @@ With "Print in LIBstick" Alma app you can send your physical items barcode/s and
 
 # First time configuration
 1. Download "Print in LIBstick" app from [Alma App Center](https://developers.exlibrisgroup.com/appcenter/).
-2. Click the following button:
+2. Click the "Configuration" button:
 
 
 
@@ -21,9 +21,9 @@ With "Print in LIBstick" Alma app you can send your physical items barcode/s and
 ![Config Button](./cloudapp/src/assets/config_btn.png)
 
 
-3. Enter your LIBstick **valid** account URL (e.g. https://libraries.technion.ac.il/technion-libstick/):
+3. Enter your LIBstick account URL (e.g. https://libraries.technion.ac.il/technion-libstick/):
 ![Config Screen](./cloudapp/src/assets/config_screen.png)
-4. Clicking the **SAVE** button - redirect you automatically to the main screen of the app.
+4. Click the **SAVE** button - redirect you automatically to the main screen of the app.
 
 **Note: The configuration will apply to the entire institute - only the first user need to enter the valid LIBstick account URL**
 
@@ -41,7 +41,7 @@ From now on, you can send more and more barcodes to LIBstick and generate labels
 
 ![Sent to LIBstick message](./cloudapp/src/assets/Barcode_sent_to_LIBstick_message.png)
 
-**Note: "Print in LIBstick" is enabled only in the relevant screens.**
+**Note: "Print in LIBstick" is enabled only in the relevant screens in Alma.**
 
 # Documentation
 See the full LIBstick documentation in the following **[link](https://libraries.technion.ac.il/technion-libstick/wp-content/themes/technionlibraryemptytheme/libsticktemplate/doc/LIBstick_documentation.pdf)**
