@@ -115,9 +115,17 @@ export class MainComponent implements OnInit, OnDestroy {
     return undefined;
   }
 
+  // private updateRelevantURL() {
+  //   if (this.pageEntities.length == 1 && 
+  //       this.pageEntities[0].type == 'ITEM') {
+  //     this.relevantURL = true;
+  //   } else {
+  //     this.relevantURL = false;
+  //   }
+  // }
+  
   private updateRelevantURL() {
-    if (this.pageEntities.length == 1 && 
-        this.pageEntities[0].type == 'ITEM') {
+    if (this.pageEntities[0].type == 'ITEM') {
       this.relevantURL = true;
     } else {
       this.relevantURL = false;
@@ -129,7 +137,19 @@ export class MainComponent implements OnInit, OnDestroy {
     if (this.libstickWindow != null && !this.libstickWindow.closed) { 
       this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.pageEntities[0].description + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
     } else {
-      this.libstickWindow = window.open(this.libstickAccountURL + "?barcode=" + this.pageEntities[0].description);
+      if (this.pageEntities.length == 1) { // Single barcode
+        this.libstickWindow = window.open(this.libstickAccountURL + "?barcode=" + this.pageEntities[0].description);
+      } else { // List of barcodes
+        let barcodesString = '';
+        for (let i = 0; i < this.pageEntities.length; i++) { // Prepare the barcodes string e.g. "123,456,789"
+          if (i < this.pageEntities.length - 1) {
+            barcodesString += this.pageEntities[i].description + ',';
+          } else {
+            barcodesString += this.pageEntities[i].description;
+          }
+        }
+        this.libstickWindow = window.open(decodeURI(this.libstickAccountURL + "?barcode=" + barcodesString));
+      } 
     }
   }
 
