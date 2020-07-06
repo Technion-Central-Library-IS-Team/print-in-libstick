@@ -133,24 +133,33 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   clickedPrintInLIBstick() {
-    this.toastr.success('Barcode sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
-    if (this.libstickWindow != null && !this.libstickWindow.closed) { 
-      this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.pageEntities[0].description + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
+    if (this.pageEntities.length == 1) {
+      this.toastr.success('Barcode sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
     } else {
+      this.toastr.success('Bar-codes sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
+    }
+    
+    if (this.libstickWindow != null && !this.libstickWindow.closed) { // LIBstick tab is already open
+      this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.prepareBarcodesString() + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
+    } else { // LIBstick tab is closed
       if (this.pageEntities.length == 1) { // Single barcode
         this.libstickWindow = window.open(this.libstickAccountURL + "?barcode=" + this.pageEntities[0].description);
       } else { // List of barcodes
-        let barcodesString = '';
-        for (let i = 0; i < this.pageEntities.length; i++) { // Prepare the barcodes string e.g. "123,456,789"
-          if (i < this.pageEntities.length - 1) {
-            barcodesString += this.pageEntities[i].description + ',';
-          } else {
-            barcodesString += this.pageEntities[i].description;
-          }
-        }
-        this.libstickWindow = window.open(decodeURI(this.libstickAccountURL + "?barcode=" + barcodesString));
+        this.libstickWindow = window.open(decodeURI(this.libstickAccountURL + "?barcode=" + this.prepareBarcodesString()));
       } 
     }
+  }
+
+  private prepareBarcodesString(): string {
+    let barcodesString = '';
+    for (let i = 0; i < this.pageEntities.length; i++) { // Prepare the barcodes string e.g. "123,456,789"
+      if (i < this.pageEntities.length - 1) {
+        barcodesString += this.pageEntities[i].description + ',';
+      } else {
+        barcodesString += this.pageEntities[i].description;
+      }
+    }
+    return barcodesString;
   }
 
 }

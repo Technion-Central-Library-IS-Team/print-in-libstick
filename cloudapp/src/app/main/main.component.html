@@ -1,4 +1,9 @@
 <div>
-  <p>The button is clickable only within items pages</p>
+  <p>The button is clickable within the following <strong>screens</strong>:</p>
+  <ol>
+    <li>Physical item editor - single barcode</li>
+    <li>Physical items result - multiple bar-codes</li>
+    <li>List of items - multiple bar-codes</li>
+  </ol>
   <a [ngClass]="(!relevantURL || libstickAccountURL == '')?'print-btn disabled-btn':'print-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a>
 </div>
