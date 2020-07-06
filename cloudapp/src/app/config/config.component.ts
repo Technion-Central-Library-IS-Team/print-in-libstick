@@ -29,9 +29,7 @@ export class ConfigComponent implements OnInit {
   }
 
   libstickAccountURLvalidOrNot($url) {
-    // return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && 
-    //          ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
-    return !(($url.startsWith("https://libdev.web3dev.technion.ac.il/") || $url.startsWith("http://libdev.web3dev.technion.ac.il/")) && 
-             ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
+    return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
+    // return !(($url.startsWith("https://libdev.web3dev.technion.ac.il/") || $url.startsWith("http://libdev.web3dev.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
   }
 }
