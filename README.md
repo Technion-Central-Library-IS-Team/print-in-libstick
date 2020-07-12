@@ -6,7 +6,7 @@
 With "Print in LIBstick" Alma app you can send your physical items barcode/s and generate label/s directly from:
 * Single **ITEM** page - send each time one label to LIBstick from "Physical Item Editor" Alma screen (**current** release)
 * Single **SET** page - send Alma SET (either logical or itemized) from Alma to LIBstick (**future** releases)
-* **ITEMS** search results page - send multiple labels from Alma to LIBstick (**future** releases)
+* **ITEMS** search results page - send multiple labels from Alma to LIBstick (**current** releases)
 
 # First time configuration
 1. Download "Print in LIBstick" app from [Alma App Center](https://developers.exlibrisgroup.com/appcenter/).
