@@ -1,11 +1,12 @@
 {
    "id": "print-in-libstick-app",
    "title": "Print in LIBstick",
-   "description": "Add a button in order to send the barcode/s to LIBstick",
+   "description": "When viewing an item record, provides a button to send the barcode to the LIBStick label printing service",
+   "subtitle": "Send barcodes from Alma to the LIBstick label printing service",
    "author": "Technion Library IS Team",
    "pages": {
       "config": "/#/config",
-      "help": "https://libraries.technion.ac.il/technion-libstick/wp-content/themes/technionlibraryemptytheme/libsticktemplate/doc/LIBstick_documentation.pdf?v=58"
+      "help": "https://github.com/Technion-Central-Library-IS-Team/print-in-libstick"
    },
    "contentSecurity": {
       "connectSrc": [
@@ -18,5 +19,8 @@
    "icon": {
       "type": "url",
       "value": "/assets/libstick_logo_alma.png"
-   }
+   },
+   "entities": [
+      "ITEM"
+   ]
 }
