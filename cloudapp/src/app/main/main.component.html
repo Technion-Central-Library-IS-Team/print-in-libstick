@@ -5,5 +5,6 @@
     <li>Physical items result - multiple bar-codes</li>
     <li>List of items - multiple bar-codes</li>
   </ol>
-  <a [ngClass]="(!relevantURL || libstickAccountURL == '')?'print-btn disabled-btn':'print-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a>
+  <a [ngClass]="(!relevantURL || libstickAccountURLIsEmpty)?'print-btn disabled-btn':'print-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a>
+  <!-- <a [ngClass]="(relevantURL && !libstickAccountURLIsEmpty)?'print-btn':'print-btn disabled-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a> -->
 </div>

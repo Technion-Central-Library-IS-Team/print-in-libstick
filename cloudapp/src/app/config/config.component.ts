@@ -23,13 +23,12 @@ export class ConfigComponent implements OnInit {
 
   onSubmit(): void {
     this.configService.set(this.libstickAccountURL).subscribe((response) => { 
-      console.log('Saved');
       window.location.href = '';
     });
   }
 
   libstickAccountURLvalidOrNot($url) {
+    // return false;
     return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
-    // return !(($url.startsWith("https://libdev.web3dev.technion.ac.il/") || $url.startsWith("http://libdev.web3dev.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
   }
 }

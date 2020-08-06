@@ -27,6 +27,8 @@ export class MainComponent implements OnInit, OnDestroy {
 
   private libstickWindow: Window = GlobalConstants.libstickWindow;
 
+  libstickAccountURLIsEmpty: boolean = false;
+
   constructor(private restService: CloudAppRestService,
     private eventsService: CloudAppEventsService,
     private toastr: ToastrService,
@@ -36,6 +38,9 @@ export class MainComponent implements OnInit, OnDestroy {
     this.pageLoad$ = this.eventsService.onPageLoad(this.onPageLoad);
     this.configService.get().subscribe( (config) => {
       this.libstickAccountURL = config;
+      if (typeof this.libstickAccountURL == 'object') {
+        this.libstickAccountURLIsEmpty = true;
+      }
       this.barcode = this.pageEntities[0].description;
     });
   }
@@ -125,7 +130,7 @@ export class MainComponent implements OnInit, OnDestroy {
   // }
   
   private updateRelevantURL() {
-    if (this.pageEntities[0].type == 'ITEM') {
+    if (this.pageEntities.length > 0 && (String(this.pageEntities[0].type) == 'ITEM' || (String(this.pageEntities[0].type) == 'SET' && this.pageEntities.length == 1))) {
       this.relevantURL = true;
     } else {
       this.relevantURL = false;
@@ -133,21 +138,36 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   clickedPrintInLIBstick() {
-    if (this.pageEntities.length == 1) {
-      this.toastr.success('Barcode sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
-    } else {
-      this.toastr.success('Bar-codes sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
+    if (String(this.pageEntities[0].type) == 'ITEM') { // ITEM/S
+      if (this.pageEntities.length == 1) {
+        this.toastr.success('Barcode sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
+      } else {
+        this.toastr.success('Bar-codes sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
+      }
+      
+      if (this.libstickWindow != null && !this.libstickWindow.closed) { // LIBstick tab is already open
+        this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.prepareBarcodesString() + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
+      } else { // LIBstick tab is closed
+        if (this.pageEntities.length == 1) { // Single barcode
+          this.libstickWindow = window.open(this.libstickAccountURL + "?barcode=" + this.pageEntities[0].description);
+        } else { // List of barcodes
+          this.libstickWindow = window.open(decodeURI(this.libstickAccountURL + "?barcode=" + this.prepareBarcodesString()));
+        } 
+      }
     }
-    
-    if (this.libstickWindow != null && !this.libstickWindow.closed) { // LIBstick tab is already open
-      this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.prepareBarcodesString() + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
-    } else { // LIBstick tab is closed
-      if (this.pageEntities.length == 1) { // Single barcode
-        this.libstickWindow = window.open(this.libstickAccountURL + "?barcode=" + this.pageEntities[0].description);
-      } else { // List of barcodes
-        this.libstickWindow = window.open(decodeURI(this.libstickAccountURL + "?barcode=" + this.prepareBarcodesString()));
-      } 
+
+    if (String(this.pageEntities[0].type) == 'SET') { // SET
+      if (this.pageEntities.length == 1) {
+        this.toastr.success('Set sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
+      }
+      
+      if (this.libstickWindow != null && !this.libstickWindow.closed) { // LIBstick tab is already open
+        this.libstickWindow.postMessage('{"itemOrSet": "set", "id": "' + this.pageEntities[0].id + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
+      } else { // LIBstick tab is closed        
+        this.libstickWindow = window.open(this.libstickAccountURL + "?setid=" + this.pageEntities[0].id);
+      }
     }
+
   }
 
   private prepareBarcodesString(): string {
