@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CloudAppConfigService } from '@exlibris/exl-cloudapp-angular-lib';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-config',
@@ -7,12 +8,13 @@ import { CloudAppConfigService } from '@exlibris/exl-cloudapp-angular-lib';
   styleUrls: ['./config.component.scss']
 })
 export class ConfigComponent implements OnInit {
-  libstickAccountURL:string;
+  libstickAccountURL: string = '';
+  loadingStatus: string = 'Loading...';
 
-  constructor( private configService: CloudAppConfigService) { }
-
-  ngOnInit(): void {
-    this.configService.get().subscribe( (config) => {
+  constructor( private configService: CloudAppConfigService,
+               private router: Router ) {
+    this.configService.get().subscribe(config => {
+      this.loadingStatus = '';
       if (Object.keys(config).length !== 0 && config.constructor !== Object) {
         this.libstickAccountURL = config;
       } else {
@@ -21,14 +23,18 @@ export class ConfigComponent implements OnInit {
     });
   }
 
+  ngOnInit(): void {
+
+  }
+
   onSubmit(): void {
     this.configService.set(this.libstickAccountURL).subscribe((response) => { 
-      window.location.href = '';
+      this.router.navigate(['']);
     });
   }
 
-  libstickAccountURLvalidOrNot($url) {
-    // return false;
-    return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
+  libstickAccountURLvalidOrNot($url): boolean {
+    return false;
+    //return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
   }
 }

@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { ConfigComponent } from './config/config.component';
 
 import { FormsModule } from '@angular/forms';
+import { PrintComponent } from './print/print.component';
 
 export function getToastrModule() {
   return ToastrModule.forRoot({
@@ -23,7 +24,8 @@ export function getToastrModule() {
   declarations: [
     AppComponent,
     MainComponent,
-    ConfigComponent
+    ConfigComponent,
+    PrintComponent
   ],
   imports: [
     MaterialModule,

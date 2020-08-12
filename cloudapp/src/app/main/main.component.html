@@ -1,10 +1,13 @@
-<div>
-  <p>The button is clickable within the following <strong>screens</strong>:</p>
-  <ol>
-    <li>Physical item editor - single barcode</li>
-    <li>Physical items result - multiple bar-codes</li>
-    <li>List of items - multiple bar-codes</li>
-  </ol>
-  <a [ngClass]="(!relevantURL || libstickAccountURLIsEmpty)?'print-btn disabled-btn':'print-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a>
-  <!-- <a [ngClass]="(relevantURL && !libstickAccountURLIsEmpty)?'print-btn':'print-btn disabled-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a> -->
-</div>
+<div *ngIf="loading; else finishLoading">Loading...</div>
+<ng-template #finishLoading>
+    <app-print *ngIf="!checkIfLIBstickAccountExists(); else firstSetup"></app-print>
+    <ng-template #firstSetup>
+        <p>Your LIBstick URL is missing.</p>
+        <p>Do you already have a LIBstick account?</p>
+        <div *ngIf="!showSocialICONS; else socialICONS">
+            <button routerLink="/config">YES</button>
+            <button (click)="onNOLIBstickAccount()">NO</button>
+        </div>
+        <ng-template #socialICONS>bla bla</ng-template>
+    </ng-template>
+</ng-template>
