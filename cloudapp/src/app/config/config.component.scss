@@ -12,7 +12,7 @@ $primary-color: #07516a;
         justify-content: center;
 
         label.url-label {
-            font-size: 18px;
+            font-size: 16px;
             color: $primary-color;
             margin-left: 2px;
             margin-bottom: 2px;
@@ -41,6 +41,7 @@ $primary-color: #07516a;
 
         div.form-buttons {
             margin-bottom: 5px;
+            text-align: center;
 
             input.btn {
                 background-color: white;
@@ -75,7 +76,7 @@ $primary-color: #07516a;
                 display:inline;
                 padding: 8px;
                 text-align: center;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: bold;
             }
     

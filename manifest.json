@@ -14,7 +14,10 @@
       ],
       "sandbox": {
          "popups": true
-      }
+      },
+      "frameSrc": [
+         "https://www.youtube.com/"
+      ]
    },
    "icon": {
       "type": "url",

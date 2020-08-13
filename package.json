@@ -6,6 +6,8 @@
     "start": "eca start"
   },
   "dependencies": {
-    "@exlibris/exl-cloudapp-base": "^0.1.20"
+    "@exlibris/exl-cloudapp-base": "^0.1.20",
+    "angular-font-awesome": "^3.1.2",
+    "font-awesome": "^4.7.0"
   }
 }
