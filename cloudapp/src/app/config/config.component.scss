@@ -6,7 +6,7 @@ $primary-color: #07516a;
     justify-content: center;
 
     form {
-        margin-top: 20px;
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -41,7 +41,7 @@ $primary-color: #07516a;
 
         div.form-buttons {
             margin-bottom: 5px;
-            text-align: center;
+            text-align: right;
 
             input.btn {
                 background-color: white;
@@ -73,9 +73,8 @@ $primary-color: #07516a;
             }
 
             div.url-message {
-                display:inline;
+                display: inline;
                 padding: 8px;
-                text-align: center;
                 font-size: 16px;
                 font-weight: bold;
             }

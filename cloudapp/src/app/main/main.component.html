@@ -5,17 +5,13 @@
     <app-print *ngIf="!checkIfLIBstickAccountExists(); else firstSetup"></app-print>
     <ng-template #firstSetup>
         <div *ngIf="!showSocialICONS; else socialICONS">
-            <p>Your LIBstick URL is missing.<br/>Do you already have a LIBstick account?</p>
-            <div class="yes-no-buttons">
-                <button routerLink="/config">YES</button>
-                <button (click)="onNOLIBstickAccount()">NO</button>
+            <div class="commercial-area">
+                <iframe width="100%" height="203" src="https://www.youtube.com/embed/zOa4nj_HO6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <p>Your LIBstick URL is missing.</p> -->
+                <button (click)="alert(123)">JOIN LIBstick</button>
+                <button routerLink="/config">Configure URL</button>
             </div>
         </div>
-        <ng-template #socialICONS>
-            <div class="commercial-area">
-                <iframe width="360" height="203" src="https://www.youtube.com/embed/zOa4nj_HO6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </ng-template>
     </ng-template>
 </ng-template>
 <app-footer></app-footer>
