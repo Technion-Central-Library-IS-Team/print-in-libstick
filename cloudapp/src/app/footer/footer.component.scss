@@ -1,0 +1,33 @@
+.social-icons {
+    position: fixed;
+    bottom: 15px;
+    right: 0;
+
+    a {
+        color: #07516a;
+        text-decoration: none;
+        padding: 0 3px;
+    }
+
+    .email:hover {
+        color: #ebeb6f;
+    }
+
+    .website:hover {
+        color: #a2d06a;
+    }
+
+    .youtube:hover {
+        color: red;
+    }
+
+    .wikipedia path {
+        fill: #07516a;
+    }
+    .wikipedia:hover path {
+        fill: #cacbcd;
+    }
+      
+}
+
+

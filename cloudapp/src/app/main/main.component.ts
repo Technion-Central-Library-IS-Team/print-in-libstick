@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CloudAppConfigService } from '@exlibris/exl-cloudapp-angular-lib';
 
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faVideo } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  faCoffee = faCoffee;
+  faVideo = faVideo;
   private libstickAccountURL: string = '';
   private loading: boolean = true;
   private showSocialICONS = false;

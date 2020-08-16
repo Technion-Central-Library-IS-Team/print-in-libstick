@@ -13,6 +13,9 @@ import { ConfigComponent } from './config/config.component';
 import { FormsModule } from '@angular/forms';
 import { PrintComponent } from './print/print.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './footer/footer.component';
+
 export function getToastrModule() {
   return ToastrModule.forRoot({
     positionClass: 'toast-top-right',
@@ -25,7 +28,8 @@ export function getToastrModule() {
     AppComponent,
     MainComponent,
     ConfigComponent,
-    PrintComponent
+    PrintComponent,
+    FooterComponent
   ],
   imports: [
     MaterialModule,
@@ -35,7 +39,8 @@ export function getToastrModule() {
     HttpClientModule,
     getTranslateModule(),
     getToastrModule(),
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
