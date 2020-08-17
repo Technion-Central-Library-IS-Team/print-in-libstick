@@ -34,4 +34,9 @@ export class MainComponent implements OnInit {
   onNOLIBstickAccount() {
     this.showSocialICONS = true;
   } 
+
+  onJoinLIBstick() {
+    console.log(123);
+    window.open('https://libraries.technion.ac.il/libstick/#join_us');
+  }
 }
