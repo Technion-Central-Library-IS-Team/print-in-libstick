@@ -129,7 +129,7 @@ export class PrintComponent implements OnInit {
     }
   }
 
-  private clickedPrintInLIBstick(): void {
+  clickedPrintInLIBstick(): void {
     if (String(this.pageEntities[0].type) == 'ITEM') { // ITEM/S
       if (this.pageEntities.length == 1) {
         this.toastr.success('Barcode sent to LIBstick', '', { positionClass: 'toast-bottom-center' });

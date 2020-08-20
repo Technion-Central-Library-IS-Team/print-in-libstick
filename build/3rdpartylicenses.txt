@@ -93,6 +93,10 @@ THE SOFTWARE.
 
 @angular/material/dialog
 
+@angular/material/icon
+
+@angular/material/progress-spinner
+
 @angular/material/snack-bar
 
 @angular/material/tooltip

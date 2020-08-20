@@ -13,7 +13,6 @@ import { ConfigComponent } from './config/config.component';
 import { FormsModule } from '@angular/forms';
 import { PrintComponent } from './print/print.component';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './footer/footer.component';
 
 export function getToastrModule() {
@@ -39,8 +38,7 @@ export function getToastrModule() {
     HttpClientModule,
     getTranslateModule(),
     getToastrModule(),
-    FormsModule,
-    FontAwesomeModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
