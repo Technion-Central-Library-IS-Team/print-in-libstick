@@ -44,7 +44,7 @@ From now on, you can send more and more barcodes to LIBstick and generate labels
 **Note: "Print in LIBstick" is enabled only in the relevant screens in Alma.**
 
 # YouTube
-![Watch video at youtube](https://www.youtube.com/watch?v=JJKIILM2c2Q)
+[Watch video at youtube](https://www.youtube.com/watch?v=JJKIILM2c2Q)
 
 # Documentation
 See the full LIBstick documentation in the following **[link](https://libraries.technion.ac.il/technion-libstick/wp-content/themes/technionlibraryemptytheme/libsticktemplate/doc/LIBstick_documentation.pdf)**
