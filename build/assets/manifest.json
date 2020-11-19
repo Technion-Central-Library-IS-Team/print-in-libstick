@@ -10,7 +10,8 @@
    },
    "contentSecurity": {
       "connectSrc": [
-         "https://libraries.technion.ac.il/"
+         "https://libraries.technion.ac.il/",
+         "https://libstick.org/"
       ],
       "sandbox": {
          "popups": true
