@@ -138,7 +138,7 @@ export class PrintComponent implements OnInit {
       }
       
       if (this.libstickWindow != null && !this.libstickWindow.closed) { // LIBstick tab is already open
-        this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.prepareBarcodesString() + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
+        this.libstickWindow.postMessage('{"itemOrSet": "item", "id": "' + this.prepareBarcodesString() + '", "libstickUrl": "' + this.libstickAccountURL + '"}', "*");
       } else { // LIBstick tab is closed
         if (this.pageEntities.length == 1) { // Single barcode
           this.libstickWindow = window.open(this.libstickAccountURL + "?barcode=" + this.pageEntities[0].description);
@@ -154,7 +154,7 @@ export class PrintComponent implements OnInit {
       }
       
       if (this.libstickWindow != null && !this.libstickWindow.closed) { // LIBstick tab is already open
-        this.libstickWindow.postMessage('{"itemOrSet": "set", "id": "' + this.pageEntities[0].id + '", "libstickUrl": "' + this.libstickAccountURL + '"}', this.libstickAccountURL + "/*");
+        this.libstickWindow.postMessage('{"itemOrSet": "set", "id": "' + this.pageEntities[0].id + '", "libstickUrl": "' + this.libstickAccountURL + '"}', "*");
       } else { // LIBstick tab is closed        
         this.libstickWindow = window.open(this.libstickAccountURL + "?setid=" + this.pageEntities[0].id);
       }

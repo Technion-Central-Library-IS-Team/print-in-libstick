@@ -35,6 +35,6 @@ export class ConfigComponent implements OnInit {
 
   libstickAccountURLvalidOrNot($url): boolean {
     // return false;
-    return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")));
+    return !(($url.startsWith("https://libraries.technion.ac.il/") || $url.startsWith("http://libraries.technion.ac.il/")) && ($url.endsWith("-libstick") || $url.endsWith("-libstick/")) || $url.startsWith("https://libstick.org/")  || $url.startsWith("http://libstick.org/"));
   }
 }
