@@ -1,5 +1,5 @@
 <div>
-  <a [ngClass]="!relevantURL ? 'print-btn disabled-btn':'print-btn'" target="_blank" (click)="clickedPrintInLIBstick()">Print in LIBstick</a>
+  <button mat-flat-button color="primary" [disabled]="!relevantURL || !!!libstickAccountURL" (click)="clickedPrintInLIBstick()">Print in LIBstick</button>
   <p>The button is clickable within the following <strong>screens</strong>:</p>
   <ol>
     <li>Physical item editor - single barcode</li>
