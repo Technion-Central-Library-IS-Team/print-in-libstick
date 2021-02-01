@@ -32,7 +32,6 @@ export class PrintComponent implements OnInit {
     private eventsService: CloudAppEventsService,
     private toastr: ToastrService,
     private configService: CloudAppConfigService) {
-
     this.configService.get().subscribe( (config) => {
       this.libstickAccountURL = config;
       if (this.pageEntities.length > 0) {
@@ -43,7 +42,6 @@ export class PrintComponent implements OnInit {
 
   ngOnInit() {
     this.pageLoad$ = this.eventsService.onPageLoad(this.onPageLoad);
-
   }
 
   ngOnDestroy(): void {
@@ -129,7 +127,7 @@ export class PrintComponent implements OnInit {
     }
   }
 
-  clickedPrintInLIBstick(): void {
+  clickedPrintInLIBstick() {
     if (String(this.pageEntities[0].type) == 'ITEM') { // ITEM/S
       if (this.pageEntities.length == 1) {
         this.toastr.success('Barcode sent to LIBstick', '', { positionClass: 'toast-bottom-center' });
@@ -159,7 +157,6 @@ export class PrintComponent implements OnInit {
         this.libstickWindow = window.open(this.libstickAccountURL + "?setid=" + this.pageEntities[0].id);
       }
     }
-
   }
 
   private prepareBarcodesString(): string {

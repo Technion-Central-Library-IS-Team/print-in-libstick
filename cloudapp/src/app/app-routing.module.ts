@@ -7,7 +7,7 @@ import { PrintComponent } from './print/print.component';
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'config', component: ConfigComponent },
-  { path: 'print', component: PrintComponent },
+  { path: 'print', component: PrintComponent }
 ];
 
 @NgModule({

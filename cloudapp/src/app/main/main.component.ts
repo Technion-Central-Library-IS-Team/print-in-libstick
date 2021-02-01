@@ -31,6 +31,6 @@ export class MainComponent implements OnInit {
   } 
 
   onJoinLIBstick() {
-    window.open('https://libraries.technion.ac.il/libstick/#join_us');
+    window.open('https://www.libstick.org/join/');
   }
 }

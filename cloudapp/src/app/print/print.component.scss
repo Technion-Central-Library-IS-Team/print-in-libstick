@@ -2,31 +2,9 @@ $primary-color: #07516a;
 
 div {
   text-align: center;
-  .print-btn {
-    background-color: $primary-color; 
-    border: 2px solid $primary-color;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    margin-top: 30px;
-    border-radius: 4px;
-  
-    &:hover {
-      background-color: white;
-      color: black;
-      transform: scale(1.03);
-    }
-  }
-  
-  .disabled-btn {
-    pointer-events: none;
-    opacity: 0.6;
+
+  #print-btn {
+    margin-top: 20px;
   }
 
   p {
@@ -44,4 +22,3 @@ div {
     margin-bottom: 2px;
   }
 }
-
