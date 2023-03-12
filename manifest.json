@@ -6,15 +6,15 @@
    "author": "Technion Library IS Team",
    "pages": {
       "config": "/#/config",
-      "help": "https://libraries.technion.ac.il/technion-libstick/wp-content/themes/technionlibraryemptytheme/libsticktemplate/doc/LIBstick_documentation.pdf#page=29&zoom=100,68,97"
+      "help": "https://libstick.org/documentation/knowledge-base/libstick-cloud-app-ex-libris-store"
    },
    "contentSecurity": {
       "connectSrc": [
-         "https://libraries.technion.ac.il/",
          "https://libstick.org/"
       ],
       "sandbox": {
-         "popups": true
+         "popups": true,
+         "modals": true
       },
       "frameSrc": [
          "https://www.youtube.com/"
