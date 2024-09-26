@@ -13,7 +13,8 @@
          "https://libstick.org/"
       ],
       "sandbox": {
-         "popups": true
+         "popups": true,
+         "modals": true
       },
       "frameSrc": [
          "https://www.youtube.com/"
