@@ -10,7 +10,8 @@
    },
    "contentSecurity": {
       "connectSrc": [
-         "https://libstick.org/"
+         "https://libstick.org/",
+         "https://libstick-europe.org/"
       ],
       "sandbox": {
          "popups": true,
