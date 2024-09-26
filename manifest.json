@@ -1,16 +1,15 @@
 {
    "id": "print-in-libstick-app",
    "title": "Print in LIBstick",
-   "description": "Send physical items and complete sets to be printed as labels according to your institution's customized template",
    "subtitle": "Print physical items and complete sets in LIBstick",
    "author": "Technion Library IS Team",
+   "description": "Send physical items and complete sets to be printed as labels according to your institution's customized template",
    "pages": {
       "config": "/#/config",
-      "help": "https://libraries.technion.ac.il/technion-libstick/wp-content/themes/technionlibraryemptytheme/libsticktemplate/doc/LIBstick_documentation.pdf#page=29&zoom=100,68,97"
+      "help": "https://libstick.org/documentation/knowledge-base/libstick-cloud-app-ex-libris-store"
    },
    "contentSecurity": {
       "connectSrc": [
-         "https://libraries.technion.ac.il/",
          "https://libstick.org/"
       ],
       "sandbox": {
