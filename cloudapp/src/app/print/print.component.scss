@@ -1,0 +1,24 @@
+$primary-color: #07516a;
+
+div {
+  text-align: center;
+
+  #print-btn {
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $primary-color;
+    margin-left: 2px;
+    margin-top: 20px;
+  }
+
+  ol {
+    text-align: left;
+    font-size: 16px;
+    color: $primary-color;
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+}

@@ -1,0 +1,10 @@
+<div>
+  <button id="print-btn" mat-flat-button color="primary" [disabled]="!relevantURL || !!!libstickAccountURL" (click)="clickedPrintInLIBstick()">Print in LIBstick</button>
+  <p>The button is clickable within the following <strong>screens</strong>:</p>
+  <ol>
+    <li>Physical item editor - single barcode</li>
+    <li>Physical items result - multiple bar-codes</li>
+    <li>List of items - multiple bar-codes</li> 
+    <li>Set Details - multiple bar-codes</li> 
+  </ol>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <label class="url-label" for="libstickAccountURL">Please enter your LIBstick account URL <br/><span class="smaller-text">(e.g. https://libstick.org/technion):</span></label>
+        <input type="text" [(ngModel)]="libstickAccountURL" name="libstickAccountURL" placeholder="{{loadingStatus}}">       
+        <div class="form-buttons">
+            <div class="url-message url-valid" *ngIf="!libstickAccountURLvalidOrNot(libstickAccountURL) && loadingStatus === ''">URL is valid</div>
+            <div class="url-message url-not-valid" *ngIf="libstickAccountURLvalidOrNot(libstickAccountURL) && loadingStatus === ''">URL isn't valid</div>
+            <button mat-flat-button color="primary" [disabled]="libstickAccountURLvalidOrNot(libstickAccountURL)?true:false">SAVE >></button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

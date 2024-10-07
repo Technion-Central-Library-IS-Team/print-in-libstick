@@ -1,0 +1,16 @@
+<div class="loading-area" *ngIf="loading; else finishLoading">
+    <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
+</div>
+<ng-template #finishLoading>
+    <app-print *ngIf="!checkIfLIBstickAccountExists(); else firstSetup"></app-print>
+    <ng-template #firstSetup>
+        <div *ngIf="!showSocialICONS">
+            <div class="commercial-area">
+                <iframe width="100%" height="203" src="https://www.youtube.com/embed/JJKIILM2c2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button (click)="onJoinLIBstick()">JOIN LIBstick</button>
+                <button routerLink="/config">Configure URL</button>
+            </div>
+        </div>
+    </ng-template>
+</ng-template>
+<app-footer></app-footer>
